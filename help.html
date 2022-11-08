@@ -59,7 +59,6 @@
       },
       async getPosts() {
         this.posts = await (await fetch('./db.json')).json();
-        console.log(this.posts);
       }
     }
   }
