@@ -37,9 +37,9 @@
 <div class="mt-5 container mx-auto px-4">
   <ul class="list-none">
     <template x-for="(item, index) in filteredSearch" :key="index">
-      <li class="flex flex-col pb-2 border-b">
+      <li class="flex flex-col pb-2 border-b mb-4 w-4/5">
         <h3 class="text-lg font-semibold" x-text="item.title">...</h3>
-        <p class="text-gray-600 text-justify" x-text="item.description">...</p>
+        <p class="text-gray-600 text-justify" x-html="item.description">...</p>
         <a x-show="item.link.length > 2" x-bind:href="item.link" target="_blank" class="text-xs mt-0.5 text-gray-400 hover:underline" x-text="item.link">...</a>
       </li>
     </template>
